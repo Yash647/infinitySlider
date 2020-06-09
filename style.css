@@ -1,0 +1,74 @@
+
+		*{
+			margin:0;
+			padding:0;
+			line-height:1.6;
+		}
+		#container{
+		    width: 100%;
+		    height: auto;
+		    position:relative;
+		}
+		#slider{
+			position: relative;
+		    overflow: hidden;
+		    width: 100%;
+		    height:auto;
+		}
+		#track{
+			position:relative;
+			height:37vh;	
+			width:600vw;
+		}
+		.transit{
+			transition: transform .7s linear;
+		}
+		#track img{
+			height:100%;
+			width:100vw;
+			/* To remove unwanted space between images present by default nature of html
+			   use float:left*/
+			float:left;
+		}
+		.btns button{
+			border-color: transparent white;
+		    border-style: solid;
+		    cursor: pointer;
+		    background: transparent;
+		    position: absolute;
+		    z-index: 1;
+		    top:50%;
+    		transform: translate(0,-50%);
+    		display:none;
+		}
+		.btns button:focus{
+			outline: 0;
+		}
+		#next{
+			border-width: 14px 0px 14px 14px;
+			right:10px;
+		}
+		#prev{
+			border-width: 14px 14px 14px 0px;
+			left:10px;
+		}
+		.btns{
+			position: absolute;
+		    height: 100%;
+		    width: 8%;
+		}
+		.btns:first-child{
+			left:0;
+			top:0;
+			z-index:1;
+		}
+		.btns:last-child{
+			right:0;
+			top:0;
+		}
+		.btns:first-child:hover #prev{
+			display: block;
+		}
+		.btns:last-child:hover #next{
+			display: block;
+		}
